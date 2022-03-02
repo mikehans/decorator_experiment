@@ -43,3 +43,8 @@ builder2.choose(CoffeeBlend.Decaf).with(Condiment.Milk).with(Condiment.Mocha);
 Beverage builtBeverage2 = builder2.GetSpecification();
 System.Console.WriteLine(builtBeverage2.Description);
 System.Console.WriteLine(builtBeverage2.Cost());
+
+Beverage myCoffee = new CoffeeBuilder2(CoffeeBlend.DarkRoast).With(Condiment.Milk).Make();
+System.Console.WriteLine("Using CoffeeBuilder2");
+System.Console.WriteLine(myCoffee.Description);
+System.Console.WriteLine(myCoffee.Cost());

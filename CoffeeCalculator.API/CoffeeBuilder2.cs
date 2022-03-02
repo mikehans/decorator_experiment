@@ -1,12 +1,11 @@
-﻿using CoffeeCalculator;
+using CoffeeCalculator;
 
 namespace CoffeeCalculator.API;
-public class CoffeeBuilder
+public class CoffeeBuilder2
 {
     Beverage beverage;
 
-    // coffeeBuilder.choose(DarkRoast).with(milk).with(mocha);
-    public CoffeeBuilder choose(CoffeeBlend blend)
+    public CoffeeBuilder2(CoffeeBlend blend)
     {
         switch (blend)
         {
@@ -18,11 +17,9 @@ public class CoffeeBuilder
                 break;
             default: throw new ArgumentException("Invalid selection");
         }
-
-        return this;
     }
 
-    public CoffeeBuilder with(Condiment condiment)
+    public CoffeeBuilder2 With(Condiment condiment)
     {
         switch (condiment)
         {
@@ -37,7 +34,8 @@ public class CoffeeBuilder
         return this;
     }
 
-    public Beverage GetSpecification(){
+    public Beverage Make()
+    {
         return beverage;
     }
 
