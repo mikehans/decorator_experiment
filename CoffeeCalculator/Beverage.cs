@@ -1,5 +1,5 @@
 ﻿namespace CoffeeCalculator;
-public class Beverage
+public abstract class Beverage
 {
     public string Description { get; set; }
     
